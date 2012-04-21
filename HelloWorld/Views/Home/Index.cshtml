@@ -1,0 +1,16 @@
+﻿@model HelloWorld.Models.HomeModel
+           
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+</p>
+<p>
+    @foreach (var item in Model.SayHelloProviders)
+    {
+        <span class="display-bold">@item.Name: </span><span>@item.SayHello()</span><br/>
+    }
+</p>
