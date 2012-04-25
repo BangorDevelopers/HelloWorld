@@ -72,6 +72,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInterfaces\ISayHello.cs" />
     <Compile Include="Services\SayHelloShara.cs" />
+    <Compile Include="Services\SayHelloCorey.cs" />
     <Compile Include="Services\SayHelloManuel.cs" />
     <Compile Include="Services\SayHelloBugsBunny.cs" />
     <Compile Include="Services\SayHelloManager.cs" />
