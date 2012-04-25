@@ -71,6 +71,7 @@
     <Compile Include="Models\HomeModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInterfaces\ISayHello.cs" />
+    <Compile Include="Services\SayHelloJeff2.cs" />
     <Compile Include="Services\SayHelloManuel.cs" />
     <Compile Include="Services\SayHelloBugsBunny.cs" />
     <Compile Include="Services\SayHelloManager.cs" />
