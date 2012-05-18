@@ -1,20 +1,17 @@
-HelloWorld
-==========
+##HelloWorld
 
 For BAND gig 4/24/2012 - Community Development
 
-GitHub Learning Exercise
+###GitHub Learning Exercise
 
-===================================================================
-1. Fork the BangorDevelopers\HelloWorld repository
+**1. Fork the BangorDevelopers\HelloWorld repository**
 
 - Browse to https://github.com/BangorDevelopers/HelloWorld
 - Click the 'Fork' button
 
 It now exists in your GitHub Online Repository.
 
-===================================================================
-2. Download the code (clone command)
+**2. Download the code (clone command)**
 
 Open the Git Bash command prompt type
 Navigate to the working directory where you want to store your github repositories
@@ -42,8 +39,7 @@ Otherwise: C:\Users\<WindowsUserName>\
 Meta data about your local GitHub repository is in the .git folder
 
 
-==================================================================
-3. Link back to the original repository (remote command)
+**3. Link back to the original repository (remote command)**
 
 In order to submit changes back to the orginal repository at BangorDevelopers
 you will need to link to it.
@@ -59,13 +55,13 @@ This adds a new entry to the .git\config file, creating an alias to the parent r
 'upstream' is just a convention used for the parent alias
 When you cloned the repository the default 'origin' remote link was created
 
-=================================================================
-4. Make some changes to the local project
+
+**4. Make some changes to the local project**
 
 Open the HelloWorld Solution in VisualStudio.
 Compile.  It should build successfully
 
->> Jeff will provide an overview of the project
+[[During the BAND gig, this is where Jeff provides an overview of the project]]
 
 Run to the see the output
 
@@ -73,8 +69,8 @@ Add your own class in the Services folder that implements ISayHello
 
 Run to see the results of your class output
 
-=================================================================
-5. Finalize your changes and upload to your forked remote repository
+
+**5. Finalize your changes and upload to your forked remote repository**
 
 Before submitting your changes to the parent 'BangorDevelopers' you must
 tell git about the changes you made (add command)
@@ -96,8 +92,8 @@ using'$git diff')
 Upload your changes to your remote repository
 $ git push
 
-================================================================
-6. Request that your update be pulled into the parent repository
+
+**6. Request that your update be pulled into the parent repository **
 
 Depending on your role on the team in the parent project, you may not have rights to push directly
 to the parent repository.
@@ -114,7 +110,7 @@ Click the 'Pull Request' button
 - Review the Files Changed
 - submit the pull request
 
-================================================================
-Congratulations! You are done!
+
+**Congratulations! You are done!**
 
 
