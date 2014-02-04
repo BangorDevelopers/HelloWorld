@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.ComponentModel.Composition.Hosting;
+using System.ComponentModel.Composition;
 
 namespace HelloWorld
 {
@@ -35,6 +37,43 @@ namespace HelloWorld
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            var catalog = new AssemblyCatalog(typeof(MvcApplication).Assembly);
+            var container = new CompositionContainer(catalog);
+
+            DependencyResolver.SetResolver(new MefDependencyResolver(container));
         }
+
+        class MefDependencyResolver : IDependencyResolver
+        {
+            CompositionContainer _compositionContainer;
+
+            public MefDependencyResolver(CompositionContainer compositionContainer)
+            {
+                _compositionContainer = compositionContainer;
+            }
+
+            public object GetService(Type serviceType)
+            {
+                string name = AttributedModelServices.GetContractName(serviceType);
+
+                return _compositionContainer.GetExportedValueOrDefault<object>(name);
+            }
+
+            public IEnumerable<object> GetServices(Type serviceType)
+            {
+                string name = AttributedModelServices.GetContractName(serviceType);
+
+                try
+                {
+                    return _compositionContainer.GetExportedValues<object>(name);
+                }
+                catch
+                {
+                    return new object[] { };
+                }
+            }
+        }
+
     }
 }
